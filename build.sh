@@ -3,6 +3,6 @@
 set -o errexit
 
 npm i
-npm i --save-dev @types/express
+npm install @types/d3 --save-dev
 npm run build
 npm run typeorm migration:run -d dist/data-source
