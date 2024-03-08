@@ -18,6 +18,15 @@ const dataSourceConfig = (): DataSourceOptions => {
     };
   }
 
+  if (nodeEnv === "production") {
+    return {
+      type: "postgres",
+      url: process.env.DATABASE_URL!,
+      entities: [entitiesPath],
+      migrations: [migrationPath],
+    };
+  }
+
   const dbUrl: string | undefined = process.env.DATABASE_URL;
 
   if (!dbUrl) throw new Error("Missing env var: 'DATABASE_URL'");
