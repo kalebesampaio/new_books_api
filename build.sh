@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 
+npm install --save @types/express
 npm i
-npm install @types/d3 --save-dev
 npm run build
 npm run typeorm migration:run -d dist/data-source
