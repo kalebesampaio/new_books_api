@@ -3,7 +3,7 @@ import { DataSource } from "typeorm";
 import app from "../../app";
 import { AppDataSource } from "../../data-source";
 import { mockedBook, mockedUser, mockedUserLogin } from "../mocks";
-import { describe, expect, test } from "@jest/globals";
+import "@types/jest";
 
 describe("Testing Assessment routes", () => {
   let connection: DataSource;
