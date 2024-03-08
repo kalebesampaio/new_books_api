@@ -8,7 +8,7 @@ import {
   mockedUserAdminLogin,
   mockedUserLogin,
 } from "../mocks";
-import { describe, expect, test } from "@jest/globals";
+import "@types/jest";
 
 describe("Testing User routes", () => {
   let connection: DataSource;
