@@ -11,8 +11,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
-    "outDir": "./dist",
-    "types": ["node", "jest"]
+    "outDir": "./dist"
   },
   "include": ["src"],
   "exclude": ["node_modules"]
