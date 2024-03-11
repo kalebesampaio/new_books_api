@@ -30,7 +30,7 @@ export class User {
   @Column({ default: false })
   admin: boolean;
 
-  @Column({ type: "date" })
+  @Column({ length: 50 })
   birthday: string;
 
   @Column({ length: 8, select: false, nullable: true })
