@@ -14,7 +14,7 @@ bookRouter.post(
 );
 bookRouter.get("", bookController.get);
 
-bookRouter.get("/:id", middlewares.verifyToken, bookController.retrieve);
+bookRouter.get("/:id", bookController.retrieve);
 bookRouter.patch(
   "/:id",
   middlewares.verifyToken,
