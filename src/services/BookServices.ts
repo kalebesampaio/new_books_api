@@ -48,7 +48,7 @@ export class bookServices {
   retrieve = async (id: string): Promise<BookReturn> => {
     const book = await bookRepository.findOne({
       where: { id },
-      relations: { assessments: true, comments: true },
+      relations: { assessments: true, comments: true, user: true },
     });
 
     if (!book) {
