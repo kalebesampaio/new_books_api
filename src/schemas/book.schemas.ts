@@ -29,8 +29,9 @@ const bookCreateSchema = bookSchema.omit({
   views: true,
 });
 
-const bookReturnSchema = bookSchema;
-
+const bookReturnSchema = bookSchema.omit({
+  user: true,
+});
 const bookReadSchema = bookReturnSchema.array();
 
 const bookUpdateSchema = bookCreateSchema.partial();

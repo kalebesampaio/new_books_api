@@ -5,7 +5,7 @@ import {
   BookUpdate,
 } from "../interfaces/index";
 import bookRepository from "../repositories/book.repository";
-import { bookReadSchema, bookReturnSchema } from "../schemas";
+import { bookReadSchema, bookReturnSchema, bookSchema } from "../schemas";
 import { AppError } from "../errors/AppError";
 import { User } from "../entities/user.entity";
 import userRepository from "../repositories/user.repository";
@@ -59,10 +59,10 @@ export class bookServices {
 
     await bookRepository.update(id, { views: add });
 
-    return bookReturnSchema.parse(
+    return bookSchema.parse(
       await bookRepository.findOne({
         where: { id },
-        relations: { assessments: true, comments: true },
+        relations: { assessments: true, comments: true, user: true },
       })
     );
   };
